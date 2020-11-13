@@ -1,5 +1,6 @@
 <?php
 $conn = mysqli_init();
+include('show (2).php');
 mysqli_real_connect($conn, 'labitfyanisa.mysql.database.azure.com', 'booeeiii@labitfyanisa', '16398booN', 'Ynaisa', 3306);
 if (mysqli_connect_errno($conn))
 {
