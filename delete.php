@@ -1,4 +1,3 @@
-<meta charset="UTF-8">
 <?php
 
 $conn = mysqli_init();
