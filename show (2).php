@@ -26,6 +26,7 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 	<th width="150"> <div align="center">Action </div></th>
   </tr>
 <?php
+		$count = 1;
 while($Result = mysqli_fetch_array($res))
 {
 ?>
@@ -36,7 +37,7 @@ while($Result = mysqli_fetch_array($res))
     <td><?php echo $Result['Link'];?></td>
 	<td><a href="delete.php"><input type="button" value="ลบ"></a></td>
   </tr>
-		<?php $cout++;}?>
+		<?php $count++;}?>
 <?php
 }
 ?>
