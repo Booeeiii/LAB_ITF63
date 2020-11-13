@@ -11,11 +11,11 @@ $name = $_REQUEST['Name'];
 
 $sql = "DELETE FROM guestbook WHERE Name=$name";
 
-
-if (mysqli_query($conn, $sql)) {
-    echo "Deleted successfully";
+echo mysqli_query($conn, $sql)
+#if (mysqli_query($conn, $sql)) {
+    #echo "Deleted successfully";
     #echo "window.location = "show (2).php";";
-  } #else {
+ # } #else {
     #echo "Error: "  }
   
 
