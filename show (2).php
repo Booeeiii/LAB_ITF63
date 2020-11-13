@@ -42,7 +42,7 @@ while($Result = mysqli_fetch_array($res))
 mysqli_close($conn);
 ?>
 
-<form action = "insert.php" method = "post" id="CommentForm" >
+<form action = "insert (1).php" method = "post" id="CommentForm" >
     Name:<br>
     <input type="text" name = "name" id="idName" placeholder="Enter Name"> <br>
     Comment:<br>
