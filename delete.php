@@ -16,7 +16,7 @@ $sql = "DELETE FROM guestbook WHERE id="$member_id"";
 
 if (mysqli_query($conn, $sql)) {
     echo "Deleted successfully";
-    echo "window.location = "show (2).php";";
+    #echo "window.location = "show (2).php";";
   } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
