@@ -36,7 +36,7 @@ while($Result = mysqli_fetch_array($res))
 }
 ?>
 </table>
-	<button align="middle" onClick="window.location.href="https://www.google.co.th/?hl=th>เพิ่ม</button>
+	<input type="button" onClick="window.location.href="https://www.google.co.th/?hl=th value="เพิ่ม">
 </div>
 <?php
 mysqli_close($conn);
