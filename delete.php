@@ -9,7 +9,7 @@ if (mysqli_connect_errno($conn))
 $name = $_REQUEST['Name'];
 
 
-$sql = "DELETE FROM guestbook WHERE name=$name";
+$sql = "DELETE FROM guestbook WHERE Name=$name";
 
 
 if (mysqli_query($conn, $sql)) {
