@@ -32,9 +32,7 @@ while($Result = mysqli_fetch_array($res))
     <td><?php echo $Result['Name'];?></div></td>
     <td><?php echo $Result['Comment'];?></td>
     <td><?php echo $Result['Link'];?></td>
-	<form action="delete.php" method = "post" id="CommentForm">
-	<td><input type="submit" id="commentBtn" value="ลบ"></td>
-	</form>
+	<td><a href="delete.php.php><input type="button" value="ลบ"></a></td>
   </tr>
 <?php
 }
