@@ -9,12 +9,10 @@ if (mysqli_connect_errno($conn))
 }
 
 
-$name = $_POST['name'];
-$comment = $_POST['comment'];
-$link = $_POST['link'];
+$member_id = $_REQUEST["member_id"]
 
 
-$sql = "DELETE FROM guestbook (Name , Comment , Link) VALUES ('$name', '$comment', '$link')";
+$sql = "DELETE FROM guestbook WHERE id="$member_id"";
 
 
 if (mysqli_query($conn, $sql)) {
