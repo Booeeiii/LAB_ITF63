@@ -36,7 +36,7 @@ while($Result = mysqli_fetch_array($res))
 }
 ?>
 </table>
-	<input type="button" onClick="location.replace("https://www.google.co.th")" value="เพิ่ม">
+	<a href="https://yanisa.azurewebsites.net/form%20(1).html"><input type="button" value="เพิ่ม"></a>
 </div>
 <?php
 mysqli_close($conn);
