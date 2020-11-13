@@ -22,6 +22,7 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
     <th width="100"> <div align="center">Name</div></th>
     <th width="350"> <div align="center">Comment </div></th>
     <th width="150"> <div align="center">Link </div></th>
+	<th width="150"> <div align="center">Action </div></th>
   </tr>
 <?php
 while($Result = mysqli_fetch_array($res))
@@ -31,6 +32,9 @@ while($Result = mysqli_fetch_array($res))
     <td><?php echo $Result['Name'];?></div></td>
     <td><?php echo $Result['Comment'];?></td>
     <td><?php echo $Result['Link'];?></td>
+	<form action="delete.php" method = "post" id="CommentForm">
+	<td><input type="submit" id="commentBtn" value="ลบ"></td>
+	</form>
   </tr>
 <?php
 }
