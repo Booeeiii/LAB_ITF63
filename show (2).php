@@ -1,5 +1,8 @@
 <html>
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <title>ITF Lab</title>
 </head>
 <body>
@@ -12,7 +15,8 @@ if (mysqli_connect_errno($conn))
 }
 $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
-<table width="600" border="1">
+
+<table class="table table-hoverable"width="600" border="1" bgcolor="pink" bordercolorlight="white" align="center">
   <tr>
     <th width="100"> <div align="center">Name</div></th>
     <th width="350"> <div align="center">Comment </div></th>
@@ -34,14 +38,6 @@ while($Result = mysqli_fetch_array($res))
 <?php
 mysqli_close($conn);
 ?>
-<form action = "insert.php" method = "post" id="CommentForm" >
-    Name:<br>
-    <input type="text" name = "name" id="idName" placeholder="Enter Name"> <br>
-    Comment:<br>
-    <textarea rows="10" cols="20" name = "comment" id="idComment" placeholder="Enter Comment"></textarea><br>  
-    Link:<br>
-    <input type="text" name = "link" id="idLink" placeholder="Enter Link"> <br><br>
-    <input type="submit" id="commentBtn">
-  </form>
+
 </body>
 </html>
