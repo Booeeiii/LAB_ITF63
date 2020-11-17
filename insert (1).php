@@ -23,4 +23,7 @@ if (mysqli_query($conn, $sql)) {
   }
   
 mysqli_close($conn);
+<html>
+    <a href="https://yanisa.azurewebsites.net/show%20(2).php"><input type="button" value="กลับหน้าแรก"></a>
+</html>
 ?>
