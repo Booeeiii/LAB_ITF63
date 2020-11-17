@@ -32,8 +32,8 @@ while($Result = mysqli_fetch_array($res))
     <td><?php echo $Result['Name'];?></div></td>
     <td><?php echo $Result['Comment'];?></td>
     <td><?php echo $Result['Link'];?></td>
-	<form action = "delete.php" method = "post" id="deleteForm" >
-		<td><input type="button" name = "name" id="idName" value="ลบ"></td>
+	<form action = "insert (1).php" method = "post" id="CommentForm" >
+		<td><input type="submit" id="commentBtn"></td>
 	</form>	
 		<input type="button" name = "name" id="idName" value="แก้ไข" onClick="DELETE FROM guestbook WHERE Name=$Result['Name']"></a></td>
   </tr>
