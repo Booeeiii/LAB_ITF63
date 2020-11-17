@@ -6,7 +6,7 @@ if (mysqli_connect_errno($conn))
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
-ech0 "HI"
+
 mysqli_close($conn);
 
 ?>
