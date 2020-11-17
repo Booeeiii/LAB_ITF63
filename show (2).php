@@ -32,9 +32,9 @@ while($Result = mysqli_fetch_array($res))
     <td><?php echo $Result['Name'];?></div></td>
     <td><?php echo $Result['Comment'];?></td>
     <td><?php echo $Result['Link'];?></td>
-	<td><input type="button" name = "name" id="idName" value="ลบ" onClick="DELETE FROM guestbook WHERE Name=$Result['Name']">
+	<td><?php><a href="'delete.php?Name=$name[0]'"><input type="button" value="ลบ"></a></php>
 		<input type="button" name = "name" id="idName" value="แก้ไข" onClick="DELETE FROM guestbook WHERE Name=$Result['Name']"></a></td>
-
+	</php>
   </tr>
 <?php
 }
