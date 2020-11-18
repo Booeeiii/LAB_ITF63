@@ -17,7 +17,7 @@ if (mysqli_connect_errno($conn))
 $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
 <div class="container" align="center">
-    <table class="table table-hoverable"width="600" border="1" bgcolor="pink" bordercolorlight="white">
+    <table class="thead-dark table table-hover">
 	
     <tr>
         <th width="100"> <div align="center">Name</div></th>
@@ -37,11 +37,11 @@ while($Result = mysqli_fetch_array($res))
 	<div class="d-inline">
 	    <form action="delete (1).php" method="post" class="d-inline">
                 <input type="hidden" name="ID" value=<?php echo $Result['ID'];?>>
-                <button type="submit" class="btn btn-sm btn-danger mb-1">Del</button>
+                <button type="submit" class="btn btn-outline-danger">Del</button>
             </form>
 	    <form action="edit.php" method="post" class="d-inline">
                 <input type="hidden" name="ID" value=<?php echo $Result['ID'];?>>
-                <button type="submit" class="btn btn-sm btn-primary mb-1">Edit</button>
+                <button type="submit" class="btn btn-outline-primary">Edit</button>
             </form>
 	</div>
      </td>
