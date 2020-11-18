@@ -50,7 +50,7 @@ while($Result = mysqli_fetch_array($res))
 }
 ?>
 </table>
-	<a href="https://yanisa.azurewebsites.net/form%20(1).html"><input type="button" class="btn btn-sm btn-danger mb-1" value="Add"></a>
+	<a href="https://yanisa.azurewebsites.net/form%20(1).html"><input type="button" class="btn btn-outline-info" value="Add"></a>
 </div>
 <?php
 mysqli_close($conn);
