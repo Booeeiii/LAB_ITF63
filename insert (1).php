@@ -26,10 +26,10 @@ $sql = "INSERT INTO guestbook (Name , Comment , Link) VALUES ('$name', '$comment
 
 
 if (mysqli_query($conn, $sql)) {
-    echo '<div class="container">
+    echo "<div class="container">
         <h3>New record created successfully</h3>
         <a role="button" class="btn btn-outline-secondary" href="show (2).php">Back to Home</a>
-        </div>';
+        </div>";
   } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
