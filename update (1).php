@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ITF Lab</title>
+    <title>Update Comment</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -23,7 +23,7 @@ $link = $_POST['link'];
 $sql = "UPDATE guestbook SET Name='$name', Comment='$text', Link='$link' WHERE ID='$ID'";
 
 if (mysqli_query($conn, $sql)) {
-    echo '<div class="container">
+    echo '<div class="container mt-4">
             <h3>Comment has been updated successfully.</h3>
             <a role="button" class="btn btn-outline-secondary" href="show (2).php">Back to Home</a>
          </div>';
