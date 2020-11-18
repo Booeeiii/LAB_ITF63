@@ -29,17 +29,18 @@ while($Result = mysqli_fetch_array($res))
 {
 ?>
   <tr>
+    <td><?php echo $Result['ID'];?></div></td>
     <td><?php echo $Result['Name'];?></div></td>
     <td><?php echo $Result['Comment'];?></td>
     <td><?php echo $Result['Link'];?></td>
     <td>
 	<div class="d-inline">
 	    <form action="delete (1).php" method="post" class="d-inline">
-                <input type="hidden" name="ID" value=<?php echo $row['ID'];?>>
+                <input type="hidden" name="ID" value=<?php echo $Result['ID'];?>>
                 <button type="submit" class="btn btn-sm btn-danger mb-1">ลบ</button>
             </form>
 	    <form action="edit_form.php" method="post" class="d-inline">
-                <input type="hidden" name="ID" value=<?php echo $row['ID'];?>>
+                <input type="hidden" name="ID" value=<?php echo $Result['ID'];?>>
                 <button type="submit" class="btn btn-sm btn-primary mb-1">แก้ไข</button>
             </form>
 	</div>
