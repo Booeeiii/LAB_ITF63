@@ -39,7 +39,7 @@ while($Result = mysqli_fetch_array($res))
                 <input type="hidden" name="ID" value=<?php echo $Result['ID'];?>>
                 <button type="submit" class="btn btn-sm btn-danger mb-1">Del</button>
             </form>
-	    <form action="edit_form.php" method="post" class="d-inline">
+	    <form action="edit.php" method="post" class="d-inline">
                 <input type="hidden" name="ID" value=<?php echo $Result['ID'];?>>
                 <button type="submit" class="btn btn-sm btn-primary mb-1">Edit</button>
             </form>
