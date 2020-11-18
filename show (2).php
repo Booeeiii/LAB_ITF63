@@ -17,14 +17,15 @@ if (mysqli_connect_errno($conn))
 $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
 <div class="container" align="center">
-    <table class="thead-dark table table-hover">
-	
+    <table class="table table-hover">
+	<thead class="thead-dark">
     <tr>
         <th width="100"> <div align="center">Name</div></th>
         <th width="350"> <div align="center">Comment </div></th>
         <th width="150"> <div align="center">Link </div></th>
 	<th width="150"> <div align="center">Action </div></th>
     </tr>
+	</thead>
 <?php
 while($Result = mysqli_fetch_array($res))
 {
