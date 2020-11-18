@@ -4,6 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <title>ITF Lab</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <?php
@@ -36,11 +37,11 @@ while($Result = mysqli_fetch_array($res))
 	<div class="d-inline">
 	    <form action="delete (1).php" method="post" class="d-inline">
                 <input type="hidden" name="ID" value=<?php echo $Result['ID'];?>>
-                <button type="submit" class="btn btn-sm btn-danger mb-1">ลบ</button>
+                <button type="submit" class="btn btn-sm btn-danger mb-1">Del</button>
             </form>
 	    <form action="edit_form.php" method="post" class="d-inline">
                 <input type="hidden" name="ID" value=<?php echo $Result['ID'];?>>
-                <button type="submit" class="btn btn-sm btn-primary mb-1">แก้ไข</button>
+                <button type="submit" class="btn btn-sm btn-primary mb-1">Edit</button>
             </form>
 	</div>
      </td>
@@ -49,7 +50,7 @@ while($Result = mysqli_fetch_array($res))
 }
 ?>
 </table>
-	<a href="https://yanisa.azurewebsites.net/form%20(1).html"><input type="button" value="เพิ่ม"></a>
+	<a href="https://yanisa.azurewebsites.net/form%20(1).html"><input type="button" class="btn btn-sm btn-danger mb-1" value="Add"></a>
 </div>
 <?php
 mysqli_close($conn);
