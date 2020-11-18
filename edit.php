@@ -21,7 +21,7 @@ $sql = "SELECT * FROM guestbook WHERE ID='$ID'";
 $res = mysqli_query($conn, $sql);
 $comment = mysqli_fetch_array($res);
 ?>
-    <div class="container">
+    <div class="container mt-4">
         <h1>Edit comment</h1>
         <form action="update (1).php" method="post" class="mt-4">
             <input type="hidden" name="ID" value=<?php echo $comment['ID'];?>>
