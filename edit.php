@@ -42,8 +42,8 @@ $comment = mysqli_fetch_array($res);
                 ?>
             </div>
             <div class="mt-4">
-                <button type="submit" class="btn btn-primary mr-1">Save</button>
-                <a role="button" class="btn btn-secondary" href="show (2).php">Back to Home</a>
+                <button type="submit" class="btn btn-outline-success">Save</button>
+                <a role="button" class="btn btn-outline-secondary" href="show (2).php">Back to Home</a>
             </div>
         </form>
     </div>
