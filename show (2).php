@@ -3,7 +3,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<title>ITF Lab</title>
+  <title>ITF Lab</title>
 </head>
 <body>
 <?php
@@ -16,14 +16,14 @@ if (mysqli_connect_errno($conn))
 $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
 <div class="container" align="center">
-	<table class="table table-hoverable"width="600" border="1" bgcolor="pink" bordercolorlight="white">
+    <table class="table table-hoverable"width="600" border="1" bgcolor="pink" bordercolorlight="white">
 	
-  <tr>
-    <th width="100"> <div align="center">Name</div></th>
-    <th width="350"> <div align="center">Comment </div></th>
-    <th width="150"> <div align="center">Link </div></th>
+    <tr>
+        <th width="100"> <div align="center">Name</div></th>
+        <th width="350"> <div align="center">Comment </div></th>
+        <th width="150"> <div align="center">Link </div></th>
 	<th width="150"> <div align="center">Action </div></th>
-  </tr>
+    </tr>
 <?php
 while($Result = mysqli_fetch_array($res))
 {
@@ -32,11 +32,18 @@ while($Result = mysqli_fetch_array($res))
     <td><?php echo $Result['Name'];?></div></td>
     <td><?php echo $Result['Comment'];?></td>
     <td><?php echo $Result['Link'];?></td>
-	<form action="delete (1).php" method="post" class="d-inline">
-                            <input type="hidden" name="ID" value=<?php echo $row['ID'];?>>
-                            <button type="submit" class="btn btn-sm btn-danger mb-1">Delete</button>
-                        </form>
-		<input type="button" name = "name" id="idName" value="แก้ไข" onClick="DELETE FROM guestbook WHERE Name=$Result['Name']"></a></td>
+    <td>
+	<div class="d-inline">
+	    <form action="delete (1).php" method="post" class="d-inline">
+                <input type="hidden" name="ID" value=<?php echo $row['ID'];?>>
+                <button type="submit" class="btn btn-sm btn-danger mb-1">ลบ</button>
+            </form>
+	    <form action="edit_form.php" method="post" class="d-inline">
+                <input type="hidden" name="ID" value=<?php echo $row['ID'];?>>
+                <button type="submit" class="btn btn-sm btn-primary mb-1">แก้ไข</button>
+            </form>
+	</div>
+     </td>
   </tr>
 <?php
 }
